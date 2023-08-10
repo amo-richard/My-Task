@@ -1,0 +1,117 @@
+﻿.detail-continaer {
+    color: whitesmoke;
+    background-color: darkgrey;
+    position: absolute;
+    flex: 1;
+    width: 20rem;
+    right: .5rem;
+    top: 1rem;
+    height: calc(100% - 1rem);
+    border-radius: 10px;
+    margin-top: -.5rem;
+    margin-bottom: -.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    box-shadow:rgba(0,0,0,0.1) -10px -5px 50px .2px;
+}
+
+.detail-descriptions{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.detail-container p, .description-container p {
+    margin: 0;
+    line-height: 1;
+}
+.description-container, .description-top,.description-self {
+    background-color: rgb(255, 255, 255,.35);
+    border-radius: .8rem;
+    padding:.5rem .8rem;
+}
+.description-container{
+    margin-top:20px;
+}
+
+.description-top{
+    border-radius: .6rem;
+    display: inline-flex;
+    align-items: center;
+}
+.description-top p{
+    line-height: 1;
+}
+.description-top, .description-self {
+    background-color: grey;
+}
+.description-icon{
+    margin-right: 1rem;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+.description-self{
+    font-family: 'Yu Gothic UI';
+    margin-top: .8rem;
+    min-height: 50px;
+}
+.description-self p{
+    line-height: 1.4;
+}
+.top {
+    font-family: 'Microsoft Sans Serif';
+    font-weight: bold;
+    background-color: rgb(255, 255, 255,.35);
+    border-radius: .8rem;
+    font-size: 1.1rem;
+    display: flex;
+    padding: .8rem 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+.close{
+    position: absolute;
+    right:-6px;
+    top: -6px; 
+    cursor: pointer;
+}
+.item-icon{
+    width: 2.2rem;
+    height:2.2rem;
+    border-radius: .3rem;
+    background-color: hotpink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-family:'Microsoft Yi Baiti';
+}
+.item-name{
+    margin:0 auto;
+}
+
+.detail-actions {
+    font-family: 'Microsoft Sans Serif';
+    justify-self: flex-end;
+    border-top: 1px solid #F5F5F5;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.detail-done, .detail-delete{
+    display: flex;
+    align-items: center;
+}
+
+.done-icon, .delete-icon{
+    margin-right: .5rem;
+}
+
+.color{
+    background-color: green;
+}

@@ -1,0 +1,30 @@
+
+.dashboard[b-8gvzhaf0bo]{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    width: 100%;
+}
+.calendar-top[b-8gvzhaf0bo] {
+    background-color: #212121;
+    padding: .8rem;
+}
+
+    .calendar-top p[b-8gvzhaf0bo] {
+        font-weight: bold;
+        margin: 0;
+        color: whitesmoke;
+        font-size: .9rem;
+        color: #E4E4E4;
+        line-height: 1;
+    }
+
+    .calendar-top .month[b-8gvzhaf0bo] {
+        font-size: 1.5rem;
+        margin-right: .6rem;
+        color: #E4E4E4;
+    }
+
+    .calendar-top .year[b-8gvzhaf0bo], .filter-count-description[b-8gvzhaf0bo] {
+        opacity: 60%;
+    }

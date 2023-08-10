@@ -1,0 +1,97 @@
+﻿@page "/"
+@using My_Task_.Client.Shared;
+@using My_Task_.Shared;
+@implements IDisposable;
+@inject DatabaseContent data;
+@inject CreateTask createTask;
+<div class="calendar">
+    <div class="calendar-top">
+        <div class="calendar-top-filter">
+            <div class="year-month">
+                <p class="month">July</p>
+                <p class="year">@DateTime.Now.Year.ToString()</p>
+            </div>
+            <div class="filter-count">
+                <p class="filter-count-description">Show</p>
+                <div class="filter-name">
+                    <p>This Week</p>
+                    <span class="show-filters">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19.544 12.544">
+                            <g id="Group_190" data-name="Group 190" transform="translate(-1829.728 -40.728)">
+                                <line id="Line_22" data-name="Line 22" y1="8" x2="8" transform="matrix(-0.174, 0.985, -0.985, -0.174, 1840.634, 43.755)" fill="none" stroke="#e4e4e4" stroke-linecap="round" stroke-width="2" />
+                                <line id="Line_110" data-name="Line 110" x2="8" y2="8" transform="matrix(0.174, 0.985, -0.985, 0.174, 1846.245, 42.366)" fill="none" stroke="#e4e4e4" stroke-linecap="round" stroke-width="2" />
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="calendar-dates"></div>
+    </div>
+    <div class="task-category-main">
+        <p>Tasks</p>                        
+        <div class="bar"></div>
+            <div class="task-category">
+            @if (dbItems != null)
+            {
+                @foreach (string items in FiltedTaskName)
+                {
+                    if (!string.IsNullOrEmpty(items))
+                    {
+                        <div class="bar"></div>
+                        <p class="item-cat">@items</p>
+
+                    }
+                }
+            }
+            else
+            {
+                <h2>@data.error</h2>
+            }
+        </div>
+    </div>
+<div class="task-container">
+        <div class="task-content" style="grid-template-columns: repeat(@(FiltedTaskName.Count),1fr);">
+            @if (dbItems!= null)
+            {
+                @foreach (string category in FiltedTaskName)
+                {
+                    <div class="task-content-sub">
+                        @foreach (TaskItem item in dbItems)
+                        {
+                            if ((item != null) && (item.TaskItemCategory == category))
+                            {
+                                <div class="item" @onclick="@(()=>{
+                                    showDetails= true;
+                                    DialogName = @item.TaskItemName;
+                                    DialogDescription = item.TaskItemDescription;
+                                    FirstLetter = char.ToUpper(@item.TaskItemName[0]);
+
+
+                                })">
+                                    <div class="top">
+                                        <div class="item-icon"></div>
+                                        <div class="item-field-top">
+                                            <div class="item-name">@item.TaskItemName</div>
+                                            <span class="date date-from">@item.TaskItemStart</span>><span class="date date-to">@item.TaskItemEnd</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="item-description">
+                                        <p>@item.TaskItemDescription</p>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                }
+            }
+        </div>
+        <Details show="showDetails" OnClose="CloseDetails">
+            <ItemName>@DialogName</ItemName>
+            <Description>@DialogDescription</Description>
+            <FirstChar>@FirstLetter</FirstChar>
+        </Details>
+
+</div>
+</div>

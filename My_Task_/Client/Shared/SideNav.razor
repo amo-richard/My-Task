@@ -1,0 +1,222 @@
+﻿@inject IJSRuntime js
+@inject NavigationManager navigation;
+@using My_Task_.Client.Pages;
+@using My_Task_.Shared;
+@using My_Task_.Client.Shared;
+@inject ShowAddTask AddTask;
+
+<div class="left-side @CenterFlex">
+    <div class="logo">
+        <div class="logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="38.227" viewBox="0 0 35 38.227">
+                <defs>
+                    <clipPath id="clip-path">
+                        <rect id="Rectangle_341" data-name="Rectangle 341" width="35" height="38.227" transform="translate(0 0)" fill="none" />
+                    </clipPath>
+                </defs>
+                <g id="Group_186" data-name="Group 186" transform="translate(0 0)">
+                    <g id="Group_185" data-name="Group 185" transform="translate(0 0)" clip-path="url(#clip-path)">
+                        <path id="Path_83" data-name="Path 83" d="M14.094,37.31,3.522,31.251A6.926,6.926,0,0,1,.039,25.262L0,13.076a6.93,6.93,0,0,1,3.445-6.01L13.979.939A6.926,6.926,0,0,1,20.908.918L31.479,6.978a6.929,6.929,0,0,1,3.483,5.989L35,25.151a6.928,6.928,0,0,1-3.444,6.012L21.022,37.288a6.929,6.929,0,0,1-6.929.022" transform="translate(0 0)" fill="#b2b1b2" />
+                        <path id="Path_84" data-name="Path 84" d="M23.05,16.165a7.033,7.033,0,1,1-7.034-7.034,7.034,7.034,0,0,1,7.034,7.034" transform="translate(3.594 3.653)" fill="#cecece" />
+                        <path id="Path_85" data-name="Path 85" d="M5.433,18.524A2.227,2.227,0,1,1,7.661,16.3a2.23,2.23,0,0,1-2.227,2.227m0-3.751A1.524,1.524,0,1,0,6.957,16.3a1.525,1.525,0,0,0-1.523-1.523" transform="translate(1.282 5.629)" fill="#f4f40c" />
+                        <path id="Path_86" data-name="Path 86" d="M14.367,8.381A2.614,2.614,0,1,1,17.5,6.422a2.614,2.614,0,0,1-3.136,1.959" transform="translate(4.936 1.288)" fill="#ff9100" />
+                        <path id="Path_87" data-name="Path 87" d="M23.609,13.652a1.172,1.172,0,0,0-1.172,1.172,7.641,7.641,0,0,1-7.525,7.736c-.066,0-.137,0-.2,0A1.194,1.194,0,0,0,13.505,23.7a1.173,1.173,0,0,0,1.144,1.2c.084.006.174.006.263.006a9.988,9.988,0,0,0,9.869-10.081,1.172,1.172,0,0,0-1.172-1.172" transform="translate(5.402 5.461)" fill="#f4f40c" />
+                    </g>
+                </g>
+            </svg>
+
+        </div>
+        <div class="logo-text @Hidable" inline>myTask</div>
+        <div class="item-collapse @ArrowProperties" @onclick="Hide">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="18.526" viewBox="0 0 22 18.526">
+                <defs>
+                    <clipPath id="clip-path">
+                        <rect id="Rectangle_215" data-name="Rectangle 215" width="10" height="5.936" fill="none" />
+                    </clipPath>
+                </defs>
+                <g id="Group_189" data-name="Group 189" transform="translate(-87 -37)">
+                    <rect id="Rectangle_243" data-name="Rectangle 243" width="22" height="18.526" rx="3" transform="translate(87 37)" fill="#212121" />
+                    <g id="Group_101" data-name="Group 101" transform="translate(92.333 43.255)">
+                        <g id="Group_43" data-name="Group 43" clip-path="url(#clip-path)">
+                            <path id="Path_41" data-name="Path 41" d="M9.743,2.53a.5.5,0,0,1,.193.684.511.511,0,0,1-.193.193l-4.4,2.465a.5.5,0,0,1-.749-.438V.5A.5.5,0,0,1,5.344.064Z" transform="translate(0 0)" fill="#fffcfc" />
+                            <path id="Path_42" data-name="Path 42" d="M5.485,3.024h0a.72.72,0,0,1-.72.72H.72a.72.72,0,0,1,0-1.44H4.765a.72.72,0,0,1,.72.72" transform="translate(0 0)" fill="#fffcfc" />
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <div class="navigations">
+        <div class="nav-dashboard nav @bgdashboard @RemovePaddingLeft" @onclick="Dashboard">
+                <div class="nav-dashboard-logo inline">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_209" data-name="Rectangle 209" width="20" height="20" fill="none" />
+                            </clipPath>
+                        </defs>
+                        <g id="Group_113" data-name="Group 113" transform="translate(-2)">
+                            <g id="Group_38" data-name="Group 38" transform="translate(2)" clip-path="url(#clip-path)">
+                                <path id="Path_36" data-name="Path 36" d="M1.629,0H7.259a1.63,1.63,0,0,1,1.63,1.629v5.63a1.63,1.63,0,0,1-1.63,1.629H1.629A1.629,1.629,0,0,1,0,7.259V1.629A1.629,1.629,0,0,1,1.629,0" fill="#dfd9d9" />
+                                <path id="Path_37" data-name="Path 37" d="M1.629,15.556H7.259a1.63,1.63,0,0,1,1.63,1.629v5.63a1.63,1.63,0,0,1-1.63,1.629H1.629A1.629,1.629,0,0,1,0,22.815v-5.63a1.629,1.629,0,0,1,1.629-1.629" transform="translate(0 -5.185)" fill="#dfd9d9" />
+                                <path id="Path_38" data-name="Path 38" d="M17.185,15.556h6.371a1.629,1.629,0,0,1,1.629,1.629v6.371a1.629,1.629,0,0,1-1.629,1.629H17.185a1.629,1.629,0,0,1-1.629-1.629V17.185a1.629,1.629,0,0,1,1.629-1.629" transform="translate(-5.185 -5.185)" fill="#b9b0b0" />
+                                <path id="Path_39" data-name="Path 39" d="M17.185,0h5.629a1.63,1.63,0,0,1,1.63,1.629v5.63a1.63,1.63,0,0,1-1.63,1.629H17.185a1.629,1.629,0,0,1-1.629-1.629V1.629A1.629,1.629,0,0,1,17.185,0" transform="translate(-5.185)" fill="#dfd9d9" />
+                            </g>
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="nav-text @Hidable">Dashboard</div>
+        </div>
+
+        <div class="nav-calendar nav @bghome @RemovePaddingLeft" @onclick="Home">
+            <div class="nav-logo inline">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="19.356" viewBox="0 0 20 19.356">
+                    <defs>
+                        <clipPath id="clip-path">
+                            <rect id="Rectangle_345" data-name="Rectangle 345" width="20" height="19.356" fill="none" stroke="#707070" stroke-width="2.3" />
+                        </clipPath>
+                    </defs>
+                    <g id="Group_192" data-name="Group 192" transform="translate(0 0)">
+                        <g id="Group_191" data-name="Group 191" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <rect id="Rectangle_344" data-name="Rectangle 344" width="15.304" height="9.095" rx="3.6" transform="translate(2.348 5.13)" fill="none" stroke="#dfd9d9" stroke-width="2.3" />
+                            <line id="Line_110" data-name="Line 110" x2="17.391" transform="translate(1.304 18.051)" fill="none" stroke="#dfd9d9" stroke-linecap="round" stroke-width="2.3" />
+                            <line id="Line_111" data-name="Line 111" x2="17.119" transform="translate(1.576 1.304)" fill="none" stroke="#dfd9d9" stroke-linecap="round" stroke-width="2.3" />
+                        </g>
+                    </g>
+                </svg>
+
+            </div>
+            <div class="nav-text @Hidable">Calender</div>
+        </div>
+        <div class="nav-add nav @bgAdd @RemovePaddingLeft" @onclick="Add">
+            <div class="nav-logo inline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g id="Add" transform="translate(-36 -277)">
+                      <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(36 277)" fill="none" stroke="#dfd9d9" stroke-width="2">
+                        <circle cx="10" cy="10" r="10" stroke="none"/>
+                        <circle cx="10" cy="10" r="9" fill="none"/>
+                      </g>
+                      <g id="create" transform="translate(42 283)">
+                        <line id="Line_2" data-name="Line 2" x2="8" transform="translate(0 4)" fill="none" stroke="#dfd9d9" stroke-linecap="round" stroke-width="2"/>
+                        <line id="Line_3" data-name="Line 3" x2="8" transform="translate(4) rotate(90)" fill="none" stroke="#dfd9d9" stroke-linecap="round" stroke-width="2"/>
+                      </g>
+                    </g>
+                </svg>
+</div>
+            <div class="nav-text @Hidable">Add</div>
+        </div>
+    </div>
+
+    <div class="sub-nav sub-nav-projects">@ProjectText</div>
+    <div class="sub-nav sub-nav-tasks">TASKS</div>
+
+    <div class="settings">
+        <div class=" profile-container">
+            <div class="online-status" style="background-color:@StatusColor"></div>
+        </div>
+        <div class="details-settings @Hidable">
+            <p class="full-name @Hidable">Amo Richard</p>
+            <p class="online-status-text @Hidable">@StatusText</p>
+        </div>
+        <div class="settings-icon @Hidable">
+            <svg id="Group_188" data-name="Group 188" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+                <defs>
+                    <clipPath id="clip-path">
+                        <rect id="Rectangle_342" data-name="Rectangle 342" width="25" height="25" fill="none" />
+                    </clipPath>
+                </defs>
+                <g id="Group_187" data-name="Group 187" clip-path="url(#clip-path)">
+                    <path id="Path_89" data-name="Path 89" d="M11.786,1.071A10.714,10.714,0,1,1,1.071,11.786,10.715,10.715,0,0,1,11.786,1.071" transform="translate(0.714 0.714)" fill="#707070" />
+                    <path id="Path_90" data-name="Path 90" d="M12.5,25a12.737,12.737,0,0,1-1.953-.152A1.786,1.786,0,0,1,11.1,21.32a9.063,9.063,0,0,0,3.257-.085A1.786,1.786,0,1,1,15.1,24.73a12.531,12.531,0,0,1-2.6.27m-5.36-1.433a1.772,1.772,0,0,1-.892-.242,12.486,12.486,0,0,1-3.462-2.958,1.786,1.786,0,1,1,2.773-2.25,8.929,8.929,0,0,0,2.477,2.118,1.786,1.786,0,0,1-.9,3.332m11.2-.293a1.785,1.785,0,0,1-.975-3.282,8.976,8.976,0,0,0,2.362-2.243,1.786,1.786,0,0,1,2.888,2.1,12.5,12.5,0,0,1-3.3,3.135,1.78,1.78,0,0,1-.972.288M2.307,17.6a1.786,1.786,0,0,1-1.7-1.235A12.542,12.542,0,0,1,0,12.5c0-.22.007-.438.018-.655a1.786,1.786,0,0,1,3.567.187c-.008.155-.013.312-.013.468a8.956,8.956,0,0,0,.435,2.758,1.785,1.785,0,0,1-1.148,2.25,1.757,1.757,0,0,1-.55.088m20.545-.537a1.756,1.756,0,0,1-.462-.06,1.787,1.787,0,0,1-1.265-2.187,8.912,8.912,0,0,0,.3-2.313,9.2,9.2,0,0,0-.05-.935,1.785,1.785,0,1,1,3.552-.367,12.62,12.62,0,0,1-.357,4.537,1.785,1.785,0,0,1-1.723,1.325M2.709,9.927a1.762,1.762,0,0,1-.727-.157,1.784,1.784,0,0,1-.9-2.358A12.405,12.405,0,0,1,3.662,3.66,1.785,1.785,0,0,1,6.187,6.185,8.934,8.934,0,0,0,4.341,8.867a1.786,1.786,0,0,1-1.632,1.06m19.342-.505a1.783,1.783,0,0,1-1.592-.973,8.92,8.92,0,0,0-1.985-2.583,1.786,1.786,0,1,1,2.392-2.653,12.476,12.476,0,0,1,2.773,3.613,1.785,1.785,0,0,1-1.588,2.6M8.144,4.495a1.786,1.786,0,0,1-.728-3.417A12.391,12.391,0,0,1,11.849.017a1.634,1.634,0,0,1,.327.013A1.729,1.729,0,0,1,12.5,0a12.446,12.446,0,0,1,4.483.828A1.786,1.786,0,1,1,15.7,4.162a8.894,8.894,0,0,0-3.2-.59,1.854,1.854,0,0,1-.235-.015,1.727,1.727,0,0,1-.232.027,8.853,8.853,0,0,0-3.162.757,1.787,1.787,0,0,1-.727.155" transform="translate(-0.001)" fill="#707070" />
+                    <path id="Path_91" data-name="Path 91" d="M9.643,4.286A5.358,5.358,0,1,1,4.286,9.643,5.357,5.357,0,0,1,9.643,4.286" transform="translate(2.857 2.857)" fill="#fff" />
+                    <path id="Path_92" data-name="Path 92" d="M9.643,15A5.357,5.357,0,1,1,15,9.643,5.363,5.363,0,0,1,9.643,15m0-10.357a5,5,0,1,0,5,5,5.006,5.006,0,0,0-5-5" transform="translate(2.857 2.857)" fill="#707070" />
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
+
+
+@code{
+    public string? StatusString{ get; set; }
+    private bool Status {get;set;}
+    bool Collapse = false;
+    string ArrowProperties = "";
+    string Hidable = "";
+    string CenterFlex = "";
+    string ProjectText = "PROJECTS";
+    string StatusColor = "#707070";
+
+    string StatusText = "Away";
+    private string? bghome { get; set; } = "active";
+    private string? bgdashboard { get; set; }
+    private string? bgAdd{ get; set; }
+    private bool AddState = false;
+    string? RemovePaddingLeft = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Call the JavaScript function to check the internet connection status
+        Status = await js.InvokeAsync<bool>("networkStatus.isOnline");
+
+        // Register an event listener to update the status dynamically
+        js.InvokeVoidAsync("networkStatus.updateStatus", DotNetObjectReference.Create(this));
+
+        StatusText = Status ? "Online" : "Away";
+        StatusColor = Status ? "#18BC49" : "#707070";
+
+        bghome = navigation.Uri == "" ? "active" : "";
+
+
+    }
+    [JSInvokable]
+    public void UpdateStatus(bool isOnline)
+    {
+        Status = isOnline;
+        StateHasChanged(); // Trigger a re-render to update the UI
+    }
+
+    public void Hide()
+    {
+
+        Collapse = Collapse ? false : true;
+        Hidable = Collapse ? "hidable" : "";
+        CenterFlex = Collapse ? "center-flex" : "";
+        ProjectText = Collapse ? "PR0JTS" : "PROJECTS";
+        ArrowProperties = Collapse ? "arrow-properties":"";
+        RemovePaddingLeft = Collapse ? "remove-padding" : "";
+
+    }
+
+    private void Dashboard()
+    {
+        AddTask.Hide();
+        bgAdd = "";
+        bghome = "";
+        bgdashboard = "active";
+        navigation.NavigateTo("dashboard",replace:false);
+    } 
+
+    private void Home()
+    {
+        AddTask.Hide();
+        bgAdd = "";
+        AddState = false;
+        bghome = "active";
+        bgdashboard = "";
+        navigation.NavigateTo("", replace: false);
+
+    }
+
+    private void Add()
+    {
+        AddTask.Update();
+        bghome = "";
+        bgdashboard = "";
+        bgAdd = "active";
+    }
+
+}
+

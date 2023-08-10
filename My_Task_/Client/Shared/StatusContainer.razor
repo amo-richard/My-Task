@@ -1,0 +1,53 @@
+﻿@using My_Task_.Shared;
+@using Microsoft.AspNetCore.Components;
+
+<div class="column">
+    <h2 >string @Status</h2>
+    <div class="dropzone"
+        ondragover="event.preventDefault();"></div>
+   
+</div>
+
+
+
+@code{
+    public static string[] Status = new[] {
+            "To D0",
+            "In Progress",
+            "Completed" };
+
+
+    [Parameter]
+    public List<TaskItem> TaskItems { get; set; } = new();
+
+    [Parameter]
+    public EventCallback OnDrop { get; set; }
+
+    [Parameter]
+    public EventCallback<TaskItem> OnStartDrag { get; set; }
+
+    private void OnDragStartHandler(TaskItem task)
+    {
+        OnStartDrag.InvokeAsync(task);
+    }
+
+
+    [Inject] public HttpClient Http { get; set; }
+    private IList<TaskItem> dbItems;
+    private string? error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            string requestUri = "api/TaskItems";
+
+            dbItems = await Http.GetFromJsonAsync<IList<TaskItem>>(requestUri);
+        }
+        catch (Exception)
+        {
+            error = "an error occured";
+        }
+    }
+}
+}

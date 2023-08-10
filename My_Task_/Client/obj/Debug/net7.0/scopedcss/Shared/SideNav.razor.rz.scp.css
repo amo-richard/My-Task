@@ -1,0 +1,158 @@
+.left-side[b-519zqcx6g3] {
+    background-color: #3B3B3B;
+    height: 100vh;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.center-flex[b-519zqcx6g3]{
+    justify-content:center !important;
+    align-items:center;
+}
+
+.hidable[b-519zqcx6g3]{
+    height:0!important;
+    width:0!important;
+    font-size: 0!important;
+    z-index:-100!important;
+    margin:0 !important;
+    overflow:hidden;
+}
+
+.logo[b-519zqcx6g3] {
+    position:relative;
+}
+
+.item-collapse[b-519zqcx6g3]{
+    width: 20px;
+    height: 18px;
+    margin-left: 3rem;
+    cursor:pointer;
+    transform:rotateY(180deg);
+}
+
+.arrow-properties[b-519zqcx6g3] {
+    position: absolute;
+    margin: 0 !important;
+    right: -1.8rem;
+    transform: rotateY(0deg);
+}
+.nav-calendar[b-519zqcx6g3], .nav-add[b-519zqcx6g3], .nav-dashboard[b-519zqcx6g3] {
+    border-radius: 10px;
+    /*padding: 8px;*/
+}
+
+.logo-icon[b-519zqcx6g3] {
+    width: 35px !important;
+    height: 38.227px !important;
+}
+
+.nav[b-519zqcx6g3],.logo[b-519zqcx6g3]{
+    display:flex;
+    align-items:center;
+}
+
+.nav[b-519zqcx6g3] {
+    margin-top: 1.5rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+.nav + .nav[b-519zqcx6g3]{
+    margin-top: .4rem;
+}
+.logo-text[b-519zqcx6g3]{
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-weight:600;
+}
+.logo-text[b-519zqcx6g3], .nav-text[b-519zqcx6g3], .sub-nav[b-519zqcx6g3] {
+    font-family: 'Microsoft Tai Le';
+    color: whitesmoke;
+}
+.nav .nav-text[b-519zqcx6g3]{
+    font-size: .95rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    opacity: 60%;
+}
+.inline[b-519zqcx6g3] {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.settings[b-519zqcx6g3] {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 8px;
+    background: grey;
+    backdrop-filter:blur(4px)
+}
+.profile-container[b-519zqcx6g3]{
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 5px;
+    background-image: url("Sun.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: aliceblue;
+    position: relative;
+}
+
+.online-status[b-519zqcx6g3] {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -1px;
+    right: -2px;
+}
+
+.details-settings p[b-519zqcx6g3] {
+    line-height: 1;
+    font-size: .8rem;
+    font-family: 'Segoe UI Symbol';
+    color: white;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.details-settings p:last-child[b-519zqcx6g3] {
+    color: whitesmoke;
+    opacity:45%;
+}
+
+.settings-icon[b-519zqcx6g3]{
+    width: 25px;
+    height: 25px;
+    margin-left:auto;
+}
+
+
+.sub-nav[b-519zqcx6g3]{
+    border-top:1.5px solid rgba(246,246,246,0.2);
+    margin-top: 1.5rem;
+    padding-top: .4rem;
+    flex:1;
+    color:lightgrey;
+    font-size:1rem;
+}
+
+.nav:hover[b-519zqcx6g3]{
+    background-color: rgba(246,246,246,0.2);
+    padding-left: 1rem;
+}
+
+.nav.active[b-519zqcx6g3] {
+    background-color: rgba(246,246,246,0.5);
+    padding-left: 1rem;
+}
+
+.nav.remove-padding:hover[b-519zqcx6g3] {
+    padding: 8px;
+}
+.nav.remove-padding.active[b-519zqcx6g3] {
+    padding: 8px;
+}

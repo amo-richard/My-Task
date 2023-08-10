@@ -1,0 +1,53 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = My_Task_.Client
+build_property.RootNamespace = My_Task_.Client
+build_property.ProjectDir = C:\Users\HELLO\My_Task_\My_Task_\Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\HELLO\My_Task_\My_Task_\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/HELLO/My_Task_/My_Task_/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HELLO/My_Task_/My_Task_/Client/Shared/StatusContainer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN0YXR1c0NvbnRhaW5lci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HELLO/My_Task_/My_Task_/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HELLO/My_Task_/My_Task_/Client/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-8alhisl2xs
+
+[C:/Users/HELLO/My_Task_/My_Task_/Client/Pages/DashBoard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaEJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-8gvzhaf0bo
+
+[C:/Users/HELLO/My_Task_/My_Task_/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-cn45ryekfj
+
+[C:/Users/HELLO/My_Task_/My_Task_/Client/Shared/AddTask.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFkZFRhc2sucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-3s19pmr1kc
+
+[C:/Users/HELLO/My_Task_/My_Task_/Client/Shared/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-yiy5rw197r
+
+[C:/Users/HELLO/My_Task_/My_Task_/Client/Shared/SideNav.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNpZGVOYXYucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-519zqcx6g3

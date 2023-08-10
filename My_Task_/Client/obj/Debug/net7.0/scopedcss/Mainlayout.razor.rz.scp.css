@@ -1,0 +1,20 @@
+.body[b-8alhisl2xs] {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-body[b-8alhisl2xs] {
+    background-image: url("background.svg");
+    background-size: cover;
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+.left-body .body[b-8alhisl2xs]{
+    height:100vh;
+    width: 100%;
+    flex: 1;
+}
